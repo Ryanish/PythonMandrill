@@ -4,7 +4,8 @@ import mandrill
 try:
     mandrill_client = mandrill.Mandrill('hdsUHK9sxGH4Tzn6IiLNmw')
     result = mandrill_client.users.info()
-    print mandrill_client.users.info()
+    result = mandrill_client.users.senders()
+    print mandrill_client.users.senders()
 
 except mandrill.Error, e:
     # Mandrill errors are thrown as exceptions
